@@ -2,7 +2,10 @@
   <div class="index container">
     <ul class="categories">
       <li v-for="(category,index) in categories" :key="index">
-        <a class="chip waves-effect waves-light btn">{{category}}</a>
+        <router-link
+          :to="{name: 'EditWorkout', params:{category: category}}"
+          class="chip waves-effect waves-light btn"
+        >{{category}}</router-link>
       </li>
     </ul>
     <Heatmap/>
@@ -20,7 +23,7 @@ export default {
   },
   data() {
     return {
-      categories: [],
+      categories: []
     };
   },
   methods: {
@@ -31,7 +34,7 @@ export default {
         .then(workouts => {
           workouts.forEach(workout => {
             let singleCat = workout.data().category;
-            if (tempCat.indexOf("singleCat") == -1) {
+            if (tempCat.indexOf(singleCat) == -1) {
               tempCat.push(singleCat);
             }
           });

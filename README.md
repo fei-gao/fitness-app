@@ -27,3 +27,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 ## Focus
 1. If user workout multiple times a day, by default heatmap only counts duration of the last exercise, need use ```reduce``` method to loop array to count total duration.
+2. Render lists in time descending order

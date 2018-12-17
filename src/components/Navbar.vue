@@ -3,7 +3,7 @@
     <nav class="nav-extended green darken-4">
       <div class="nav-content">
         <router-link :to="{name: 'Index'}">
-          <span class="nav-title">Fit Ninja</span>
+          <span class="nav-title">Be Fit</span>
         </router-link>
         <a href class="btn-floating btn-large halfway-fab light-green accent-4">
           <router-link :to="{name: 'AddWorkout'}">
