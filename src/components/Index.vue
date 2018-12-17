@@ -1,5 +1,5 @@
 <template>
-  <div class="index container center">
+  <div class="index container">
     <ul class="categories">
       <li v-for="(category,index) in categories" :key="index">
         <a class="chip waves-effect waves-light btn">{{category}}</a>
@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      categories: []
+      categories: [],
     };
   },
   methods: {

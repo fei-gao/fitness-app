@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueCalendarHeatmap from 'vue-calendar-heatmap'
 
+Vue.use(VueCalendarHeatmap)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
