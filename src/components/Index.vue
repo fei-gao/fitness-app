@@ -5,14 +5,19 @@
         <a class="chip waves-effect waves-light btn">{{category}}</a>
       </li>
     </ul>
+    <Heatmap/>
   </div>
 </template>
 
 <script>
 import db from "@/firebase/init";
+import Heatmap from "@/components/Heatmap";
 
 export default {
   name: "Index",
+  components: {
+    Heatmap
+  },
   data() {
     return {
       categories: []
