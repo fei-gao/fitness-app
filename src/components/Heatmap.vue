@@ -1,6 +1,6 @@
 <template>
-  <div class="center">
-    <h3>Fitness Calendar</h3>
+  <div class="heatmap">
+    <h6>Fitness Calendar</h6>
     <calendar-heatmap
       :values="options.values"
       :end-date="options.endDate"
@@ -62,3 +62,11 @@ export default {
   }
 };
 </script>
+
+<style>
+.heatmap {
+  margin: 10px auto;
+  width: 95vw;
+}
+</style>
+

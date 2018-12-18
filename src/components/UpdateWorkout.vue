@@ -23,6 +23,9 @@
         <button class="btn lime accent-4">Update Workout</button>
       </div>
     </form>
+    <button class="lime accent-4 white-text">
+      <router-link :to="{name: 'EditWorkout', params:{category: this.workout.category}}">Go Back</router-link>
+    </button>
   </div>
 </template>
 

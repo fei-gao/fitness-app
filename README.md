@@ -28,3 +28,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ## Focus
 1. If user workout multiple times a day, by default heatmap only counts duration of the last exercise, need use ```reduce``` method to loop array to count total duration.
 2. Render lists in time descending order
+3. Navbar width 100%
+4. Add go back button on update/:id page, redirect to edit/:category

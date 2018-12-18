@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Add Workout</h2>
+    <h6>Add Workout</h6>
     <form @submit.prevent="addWorkout" class="card center-align">
       <div class="field">
         <label for="category">Category:</label>
@@ -67,9 +67,9 @@ export default {
 </script>
 
 <style>
-.container .center {
+.container {
   max-width: 200px;
-  margin-top: 50px;
+  margin: 100px auto;
 }
 </style>
 

@@ -1,13 +1,15 @@
 <template>
-  <div class="index container">
-    <ul class="categories">
-      <li v-for="(category,index) in categories" :key="index">
-        <router-link
-          :to="{name: 'EditWorkout', params:{category: category}}"
-          class="chip waves-effect waves-light btn"
-        >{{category}}</router-link>
-      </li>
-    </ul>
+  <div class="index">
+    <div class="container">
+      <ul class="categories">
+        <li v-for="(category,index) in categories" :key="index">
+          <router-link
+            :to="{name: 'EditWorkout', params:{category: category}}"
+            class="chip waves-effect waves-light btn"
+          >{{category}}</router-link>
+        </li>
+      </ul>
+    </div>
     <Heatmap/>
   </div>
 </template>
