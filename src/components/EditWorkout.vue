@@ -8,6 +8,7 @@
           <th>Duration(min)</th>
           <th>Distance(km)</th>
           <th>Description</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -16,6 +17,10 @@
           <td>{{list.duration}}</td>
           <td>{{list.distance}}</td>
           <td>{{list.description}}</td>
+          <td>
+            <i class="material-icons delete" @click="deleteWorkout(list.id)">delete</i>
+            {{list.id}}
+          </td>
         </tr>
       </tbody>
     </table>
@@ -33,6 +38,7 @@ export default {
     };
   },
   methods: {
+    // get all workouts under this category
     getThisCategory() {
       let tempLists = [];
       db.collection("workouts")
@@ -54,6 +60,18 @@ export default {
         });
       let reversed = tempLists.reverse();
       this.lists = reversed;
+    },
+    deleteWorkout(id) {
+      // delete doc from firestore
+      db.collection("workouts")
+        .doc(id)
+        .delete()
+        // delete list locally
+        .then(() => {
+          this.lists = this.lists.filter(list => {
+            return list.id != id;
+          });
+        });
     }
   },
   created() {
