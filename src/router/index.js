@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import AddWorkout from '@/components/AddWorkout'
 import EditWorkout from '@/components/EditWorkout'
+import UpdateWorkout from '@/components/UpdateWorkout'
 
 
 Vue.use(Router)
@@ -20,9 +21,14 @@ export default new Router({
       component: AddWorkout
     },
     {
-      path:'edit/:category',
-      name:'EditWorkout',
+      path: 'edit/:category',
+      name: 'EditWorkout',
       component: EditWorkout
+    },
+    {
+      path: 'update/:id',
+      name: 'UpdateWorkout',
+      component: UpdateWorkout
     }
   ]
 })

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Edit {{this.$route.params.category}}</h1>
+    <h3>Edit {{this.$route.params.category}}</h3>
     <table class="striped center">
       <thead>
         <tr>
@@ -19,7 +19,9 @@
           <td>{{list.description}}</td>
           <td>
             <i class="material-icons delete" @click="deleteWorkout(list.id)">delete</i>
-            {{list.id}}
+            <router-link :to="{name: 'UpdateWorkout', params:{id: list.id}}">
+              <i class="material-icons edit green-text darken-3">edit</i>
+            </router-link>
           </td>
         </tr>
       </tbody>
